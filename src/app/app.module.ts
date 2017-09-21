@@ -1,9 +1,10 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {AppComponent} from './app/app.component';
-import {NotFoundComponent} from './not-found/not-found.component';
+import {AppComponent} from './components/app/app.component';
+import {NotFoundComponent} from './components/not-found/not-found.component';
 import {AppRoutingModule} from "./app.routing";
+import {ChatModule} from "./modules/chat/chat.module";
+import {AuthModule} from "./modules/auth/auth.module";
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import {AppRoutingModule} from "./app.routing";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    ChatModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

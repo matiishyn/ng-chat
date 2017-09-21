@@ -1,9 +1,10 @@
 import {RouterModule, Routes} from "@angular/router";
-import {NotFoundComponent} from "./not-found/not-found.component";
+import {NotFoundComponent} from "./components/not-found/not-found.component";
 import {NgModule} from "@angular/core";
 
 const routes: Routes = [
-  {path: 'no', component: NotFoundComponent},
+  { path: '', pathMatch: 'full', redirectTo: 'login' },
+  //{path: 'no', component: NotFoundComponent},
   // {path: '**', component: NotFoundComponent}
 ];
 
