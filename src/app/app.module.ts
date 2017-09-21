@@ -5,6 +5,7 @@ import {NotFoundComponent} from './components/not-found/not-found.component';
 import {AppRoutingModule} from "./app.routing";
 import {ChatModule} from "./modules/chat/chat.module";
 import {AuthModule} from "./modules/auth/auth.module";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import {AuthModule} from "./modules/auth/auth.module";
   ],
   imports: [
     BrowserModule,
+    NgbModule.forRoot(),
     AppRoutingModule,
     ChatModule,
     AuthModule

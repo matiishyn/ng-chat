@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap.scss";
+
+input.form-control.ng-invalid {
+  border-color: $form-feedback-invalid-color;
+}
+
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}

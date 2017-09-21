@@ -1,3 +1,22 @@
-<p>
-  login works!
-</p>
+<div class="card">
+  <div class="card-body">
+
+    <h4 class="card-title text-center">Log in or Register</h4>
+
+    <form (ngSubmit)="onSubmit()" #authForm="ngForm" novalidate>
+      <div class="form-group">
+        <label for="username">Username or Email </label>
+        <input type="email" class="form-control" name="username" id="username" aria-describedby="emailHelp"
+               placeholder="Username or Email" required [(ngModel)]="model.username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required
+               [(ngModel)]="model.password">
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="authForm.invalid">Login</button>
+      <button type="button" class="float-right btn btn-secondary" [disabled]="authForm.invalid">Register</button>
+    </form>
+  </div>
+</div>
