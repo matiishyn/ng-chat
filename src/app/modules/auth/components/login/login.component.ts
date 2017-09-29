@@ -1,24 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {User} from "../../../../models/user";
+import {AuthService} from "../../auth.service";
 
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  providers: [AuthService]
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService) {
+  }
 
   ngOnInit() {
   }
 
-  model = {
+  user: User = {
     username: '',
     password: ''
   };
 
   onSubmit() {
-    console.log('subm', this.model);
+    console.log('subm', this.user);
+    this.authService.addUser(this.user);
   }
 
 }

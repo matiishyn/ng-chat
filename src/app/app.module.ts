@@ -6,6 +6,7 @@ import {AppRoutingModule} from "./app.routing";
 import {ChatModule} from "./modules/chat/chat.module";
 import {AuthModule} from "./modules/auth/auth.module";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     NgbModule.forRoot(),
     AppRoutingModule,
     ChatModule,
