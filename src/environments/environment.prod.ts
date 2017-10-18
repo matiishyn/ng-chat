@@ -1,4 +1,9 @@
+const apiProtocol = 'http://';
+const apiDomain = 'localhost:3000';
+const apiUrl = '/api/';
+
 export const environment = {
   production: true,
-  API: 'http://localhost:3000/api/'
+  API: apiProtocol + apiDomain + apiUrl,
+  API_DOMAIN: apiDomain,
 };

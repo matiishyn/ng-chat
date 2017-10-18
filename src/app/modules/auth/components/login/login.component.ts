@@ -26,4 +26,9 @@ export class LoginComponent implements OnInit {
     this.authService.addUser(this.user);
   }
 
+  onTest() {
+    console.log('test');
+    this.authService.test();
+  }
+
 }

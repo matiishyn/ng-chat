@@ -7,6 +7,9 @@ import {ChatModule} from "./modules/chat/chat.module";
 import {AuthModule} from "./modules/auth/auth.module";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {HttpClientModule} from "@angular/common/http";
+import {JwtModule} from "@auth0/angular-jwt";
+import {StorageService} from "./services/storage.service";
+import {jwtModuleConfig} from "./app.config";
 
 @NgModule({
   declarations: [
@@ -16,12 +19,13 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     HttpClientModule,
+    JwtModule.forRoot(jwtModuleConfig),   // https://github.com/auth0/angular2-jwt/tree/v1.0
     NgbModule.forRoot(),
     AppRoutingModule,
     ChatModule,
     AuthModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
