@@ -1,0 +1,5 @@
+run MongoDB
+> mongod --dbpath ~/mongo-data/db
+
+run server
+> npm start

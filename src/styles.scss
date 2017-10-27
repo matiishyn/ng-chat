@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/scss/bootstrap.scss";
+@import "~ngx-toastr/toastr";
 
 input.form-control.ng-invalid {
   border-left-color: $form-feedback-invalid-color;

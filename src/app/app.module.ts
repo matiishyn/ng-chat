@@ -10,6 +10,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {JwtModule} from "@auth0/angular-jwt";
 import {StorageService} from "./services/storage.service";
 import {jwtModuleConfig} from "./app.config";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ToastrModule} from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,10 @@ import {jwtModuleConfig} from "./app.config";
     BrowserModule,
     HttpClientModule,
     JwtModule.forRoot(jwtModuleConfig),   // https://github.com/auth0/angular2-jwt/tree/v1.0
+    BrowserAnimationsModule,              // ngx-toastr requires animations module
+    ToastrModule.forRoot({          // https://github.com/scttcper/ngx-toastr
+      progressBar: true,
+    }),
     NgbModule.forRoot(),
     AppRoutingModule,
     ChatModule,
