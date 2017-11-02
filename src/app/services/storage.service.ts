@@ -7,11 +7,11 @@ export class StorageService {
   constructor() {
   }
 
-  save(key, val) {
+  private save(key, val) {
     return window.localStorage.setItem(key, val);
   }
 
-  get(key) {
+  private get(key) {
     return window.localStorage.getItem(key);
   }
 

@@ -12,6 +12,8 @@ import {StorageService} from "./services/storage.service";
 import {jwtModuleConfig} from "./app.config";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ToastrModule} from 'ngx-toastr';
+import {AuthService} from "./services/auth.service";
+import {AuthGuardService} from "./services/auth-guard.service";
 
 @NgModule({
   declarations: [
@@ -31,7 +33,11 @@ import {ToastrModule} from 'ngx-toastr';
     ChatModule,
     AuthModule
   ],
-  providers: [StorageService],
+  providers: [
+    StorageService,
+    AuthService,
+    AuthGuardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -2,4 +2,5 @@ run MongoDB
 > mongod --dbpath ~/mongo-data/db
 
 run server
+> cd ~/Projects/node-imatiyshin-fr_07
 > npm start
